@@ -13,6 +13,7 @@ use App\User;
 use App\UserOpenid;
 use App\UserSign;
 use Cache;
+use EasyWeChat\Support\Log;
 use Illuminate\Support\Facades\Storage;
 
 class WechatMessageSever
@@ -53,7 +54,7 @@ class WechatMessageSever
                     if (is_null($user->openid)) {
                         $user->name = $wxuser->nickname;
                         $user->avatar = $wxuser->headimgurl;
-                        $user->save();
+                        Log::warning($user);
                         UserOpenid::create([
                             'user_id' => $user->id,
                             'wx_openid' => $openid,
