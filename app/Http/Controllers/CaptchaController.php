@@ -35,9 +35,8 @@ class CaptchaController extends Controller
 
     public static function verifyCaptcha( $captcha)
     {
-        if (session('Kuainiao_captcha') !== $captcha) {
-            flash('验证码错误')->warning();
-            return Redirect::back();
-        }
+        return session('Kuainiao_captcha') !== $captcha;
+
+
     }
 }

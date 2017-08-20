@@ -19,8 +19,11 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-        CaptchaController::verifyCaptcha(request('captcha'));
+        if (        CaptchaController::verifyCaptcha(request('captcha'))){
+            flash('验证码错误')->warning();
 
+            return back();
+        }
         $this->validate($request, [
             'email' => 'required|email',
             'password' => 'required|min:6|max:30',

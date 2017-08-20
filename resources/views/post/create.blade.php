@@ -11,9 +11,23 @@
                 <input name="title" type="text" class="form-control" placeholder="这里是标题">
             </div>
             <div class="form-group">
+                <label>分类</label>
+
+
+                <select id="goodsNames" name="topic" class="form-control selectpicker">
+                    <option selected  value="100">未分类</option>
+                @foreach($topics as $topic)
+                        <option value="{{$topic->id}}"> {{$topic->name}}</option >
+                @endforeach
+                </select>
+
+
+            </div>
+            <div class="form-group">
                 <label>链接</label>
                 <input name="links" type="text" class="form-control" placeholder="这是链接">
             </div>
+
             <div class="form-group">
                 <label>金币</label>
                 <input name="gold" type="text" class="form-control" placeholder="金币数量">

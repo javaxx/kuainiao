@@ -25,7 +25,7 @@
         <ul class="category-root list-group">
             @foreach($topics as $topic)
                 <li class="list-group-item">
-                    <a href="/topic/{{$topic->id}}">{{$topic->name}}
+                    <a href="/topic/{{$topic->id}}">{{$topic->name}}>>><data style="float: right;font-size:20px;" >{{$topic->posts->count()}}</data>
                     </a>
                 </li>
             @endforeach

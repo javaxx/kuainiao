@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Topic;
 use App\User;
 use Illuminate\Http\Request;
 use App\Post;
@@ -15,28 +16,25 @@ class PostController extends Controller
      */
     public function index()
     {
-
         $user = \Auth::user();
         $posts = Post::aviable()->orderBy('created_at', 'desc')->withCount(["zans", "comments",'buys'])->with(['user'])->paginate(6);
 
         return view('post/index', compact('posts'));
     }
-    public function imageUpload(Request $request)
-    {
-        $path = $request->file('wangEditorH5File')->storePublicly(md5(\Auth::id() . time()));
-        return asset('storage/'. $path);
-    }
+
+
 
     public function create()
     {
+        $topics = Topic::all();
+
         if (Auth::check()){
             $id = Auth::id();
             if($id ==1){
-                return view('post/create');
-
+                return view('post/create',compact('topics'));
             }
         }
-        flash('尚未开放,若想推荐资源,请公众号留言')->info();
+        flash('尚未开放,若想推荐资源,发邮件到 numbersi@vip.qq.com 至少获得50金币')->info();
         return back();
     }
 
@@ -46,9 +44,11 @@ class PostController extends Controller
             'title' => 'required|max:255|min:1',
             'content' => 'required|min:1',
         ]);
-        $params = array_merge(request(['title', 'content','links','gold']), ['user_id' => \Auth::id()]);
+       $topic = Topic::find(request('topic'));
+       $params = array_merge(request(['title', 'content','links','gold']), ['user_id' => \Auth::id()]);
 
-        Post::create($params);
+
+        $topic->posts()->attach(Post::create($params));
 
 
         return redirect('/posts');
