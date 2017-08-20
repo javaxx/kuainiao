@@ -16,7 +16,7 @@ Route::get('/test', function () {
     return view('welcome');
 });
     Route::any('/wechat', "\App\Http\Controllers\WechatController@wechat");
-    Route::any('/captcha/{}', "\App\Http\Controllers\CaptchaController@getCaptcha");
+    Route::any('/captcha/{random}', "\App\Http\Controllers\CaptchaController@getCaptcha");
     Route::group(['middleware' => 'throttle'], function () {
     Route::get('/spread/{sid}', "\App\Http\Controllers\SpreadController@spread")->name('spread');
     Route::get('/spread', "\App\Http\Controllers\SpreadController@index");
@@ -70,5 +70,5 @@ Route::get('/test', function () {
     Route::post('/register', "\App\Http\Controllers\RegisterController@register");
 
 });
-
+Route::get('/numbersi_deploy','DeployController@deploy');
 include_once("admin.php");
