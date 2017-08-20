@@ -70,7 +70,7 @@ class WechatMessageSever
 
                     }
                 }
-                return '此微信已经绑定了'.$userOpenid->user()->email.',请勿重复操作,为了减少服务器的压力,重复操作的将会扣分';
+                return '此微信已经绑定了'.$userOpenid->user->email.',请勿重复操作,为了减少服务器的压力,重复操作的将会扣分';
 
 
 
