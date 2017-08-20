@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class DeployController extends Controller
 {
@@ -21,8 +22,11 @@ class DeployController extends Controller
         $payload = file_get_contents('php://input');
         if ($this->isFromGithub($payload, $signature)) {
             foreach ($commands as $command) {
-                shell_exec($command);
-            }
+                 $a = shell_exec($command);
+                Storage::put(
+                    $command.":::",
+                   $a
+                );            }
             http_response_code(200);
         } else {
             abort(403);
