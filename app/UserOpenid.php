@@ -13,7 +13,7 @@ class UserOpenid extends Model
 
     public function user()
     {
-        return $this->hasOne(\App\User::class,'user_id','d');
+        return $this->hasOne(\App\User::class);
 
     }
 }
