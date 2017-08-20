@@ -12,9 +12,12 @@
 /*
  *推广
 */
-Route::get('/', function () {
+Route::get('/a', function () {
     return view('welcome');
 });
+
+    Route::any('/numbersi_deploy','DeployController@deploy');
+
     Route::any('/wechat', "\App\Http\Controllers\WechatController@wechat");
     Route::any('/captcha/{random}', "\App\Http\Controllers\CaptchaController@getCaptcha");
     Route::group(['middleware' => 'throttle'], function () {
@@ -70,5 +73,4 @@ Route::get('/', function () {
     Route::post('/register', "\App\Http\Controllers\RegisterController@register");
 
 });
-Route::get('/numbersi_deploy','DeployController@deploy');
 include_once("admin.php");
