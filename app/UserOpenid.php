@@ -13,6 +13,6 @@ class UserOpenid extends Model
 
     public function user()
     {
-        return $this->belongsTo(\App\User::class,'user_id','id');
+        return $this->hasOne(\App\User::class,'id','user_id');
     }
 }
