@@ -26,6 +26,7 @@ class WechatMessageSever
         $openid = trim($openid);
        $beginStr=  mb_substr($message , 0 , 2);
         $userOpenid= UserOpenid::where('wx_openid', $openid)->first();
+        dd($userOpenid->user);
         if (Cache::get('sign')){
             sleep(2);
 
@@ -38,8 +39,6 @@ class WechatMessageSever
                 if (is_null($userOpenid)) {
                     return '你尚未绑定,请回复邮件绑定';
                 }else{
-
-
                    return UserSignServer::sign($userOpenid->user->id);
                 }
 
