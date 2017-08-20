@@ -12,7 +12,7 @@
                 <div class="col-sm-8 blog-main">
 
                     @if(Auth::user())
-                        <p>你的推广连接 :{{route('spread',$user->id)}}</p>
+                        <p>你的推广连接 :{{route('spread',Auth::id)()}}</p>
                     @endif
                     <table class="table table-bordered credit-table col-center-block">
                         <thead>
