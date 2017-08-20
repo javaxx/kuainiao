@@ -40,8 +40,8 @@
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
     <style>body {
-          padding-top: 70px;/*有顶部固定导航条时设置*/
-            padding-bottom: 120px;/*有底部固定导航条时设置*/
+          padding-top: 200px;/*有顶部固定导航条时设置*/
+            padding-bottom: 200px;/*有底部固定导航条时设置*/
         }</style>
     <!-- Custom styles for this template -->
     <link href="/css/blog.css" rel="stylesheet">
