@@ -2,7 +2,7 @@
 
 @section("content")
     @include('flash::message')
-    <div class="col-sm-8 blog-main">
+    <div class=" blog-main col-xs-12 col-sm-6 col-md-6 col-lg-6 col-center-block"  >
 
         <form class="form-signin" method="POST" action="/login">
             {{csrf_field()}}
@@ -12,8 +12,10 @@
             <label for="inputPassword" class=" ">密码</label>
             <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
             <div >
+                <label for="captcha" class=" ">验证码</label>
+
                 <input type="text" name="captcha" class="form-control"  required>
-                <img src="/captcha/1" title="点击刷新" width="160" alt="验证码"  onclick="this.src='/captcha/'+Math.random();">
+                <img style="margin-top: 10px" src="/captcha/1" title="点击刷新" width="160" alt="验证码"  onclick="this.src='/captcha/'+Math.random();">
             </div>
 
             <div class="checkbox">

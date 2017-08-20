@@ -4,7 +4,7 @@
     @include('flash::message')
     <div class="col-sm-8 blog-main">
 
-        <table class="table table-bordered credit-table">
+        <table class="table table-bordered credit-table col-center-block">
             <thead>
             <tr class="active">
                 <th>积金币方法</th>

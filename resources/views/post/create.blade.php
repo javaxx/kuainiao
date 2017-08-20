@@ -3,7 +3,7 @@
 @section("content")
     @include('vendor.ueditor.assets')
 
-    <div class="col-sm-8 blog-main">
+    <div class="col-sm-8  col-center-block">
         <form action="/posts" method="POST">
             {{csrf_field()}}
             <div class="form-group">

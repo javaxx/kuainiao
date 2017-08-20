@@ -2,7 +2,7 @@
 
 @section("content")
     @include('flash::message')
-    <div class="col-sm-8 blog-main">
+    <div class="col-sm-8 blog-main col-center-block">
 
             <form class="form-signin" method="POST" action="/spread/register">
                 {{csrf_field()}}
@@ -23,8 +23,8 @@
 
 
 
-            @if(isset($sid)){
-                        <label  for="promoter_id"  >推荐人ID</label>
+            @if(isset($sid))
+                        <label  for="promoter_id" >推荐人ID</label>
                         <input type="" name="promoter_id" class="form-control " readonly  value="{{$sid}}"  required>
                 @endif
                 @include('layout.error')

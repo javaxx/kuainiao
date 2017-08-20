@@ -3,22 +3,31 @@
 @section("content")
     @include('flash::message')
 
-    <div class="col-sm-8 blog-main">
+    <!-- 广告轮播 -->
+    @include("post.carousel")
+    @include('flash::message')
 
-        @include("post.carousel")
-        <div style="height: 20px;">
-        </div>
-        <div>
+    <div class="container summary">
+
+        <!-- 简介 -->
+        <div class="row" id="summary-container">
             @foreach($posts as $post)
-            <div class="blog-post">
-                <h2 class="blog-post-title"><a href="/posts/{{$post->id}}" >{{$post->title}}</a></h2>
-                <p class="blog-post-meta">{{$post->created_at->toFormattedDateString()}}          by     <mark>{{$post->user->name}}</mark></p>
-                {!! str_limit($post->content, 400, '...') !!}
-                <p class="blog-post-meta">  浏览  {{ count($post->visitors) }}  |  兑换 {{$post->buys_count}}    |   赞 {{$post->zans_count}}  | 评论 {{$post->comments_count}}  </p>
-            </div>
-            @endforeach
+                <div class="col-md-4">
 
-            {{$posts->links()}}
-        </div><!-- /.blog-main -->
-    </div>
+                    <h2><a href="/posts/{{$post->id}}" >{{$post->title}}</a></h2>
+                    <p class="blog-post-meta">{{$post->created_at->toFormattedDateString()}}          by     <mark>{{$post->user->name}}</mark></p>
+                    <p class="blog-post-meta">  浏览  {{ count($post->visitors) }}  |  兑换 {{$post->buys_count}}    |   赞 {{$post->zans_count}}  | 评论 {{$post->comments_count}}  </p>
+
+                    <p><a class="btn btn-default" href="#" role="button">点我下载</a></p>
+                </div>
+
+
+
+            @endforeach
+        </div>
+
+        </div>
+
+
+
 @endsection
