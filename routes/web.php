@@ -18,6 +18,7 @@ Route::get('/a', function () {
 
     Route::any('/numbersi_deploy','DeployController@deploy');
 
+
     Route::any('/wechat', "\App\Http\Controllers\WechatController@wechat");
     Route::any('/captcha/{random}', "\App\Http\Controllers\CaptchaController@getCaptcha");
     Route::group(['middleware' => 'throttle'], function () {
