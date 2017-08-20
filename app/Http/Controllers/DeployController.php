@@ -35,12 +35,10 @@ class DeployController extends Controller
                    $a
                 );            }*/
 
-            $a =shell_exec('cd  /var/www/kuainiao');
-            Storage::put(
-                'a.txt',
-                $a
-            );
-            shell_exec('git pull');
+            shell_exec('sudo su');
+            shell_exec('cd  /var/www/kuainiao');
+
+            shell_exec('sudo git pull');
             http_response_code(200);
         } else {
             abort(403);
