@@ -12,7 +12,7 @@
 /*
  *推广
 */
-Route::get('/test', function () {
+Route::get('/', function () {
     return view('welcome');
 });
     Route::any('/wechat', "\App\Http\Controllers\WechatController@wechat");
@@ -24,7 +24,7 @@ Route::get('/test', function () {
     Route::get('/mail', '\App\Http\Controllers\SpreadController@mail');
     Route::get('/mail/verify/{token}', '\App\Http\Controllers\SpreadController@verifyMail')->name('email.verify');
     Route::get('/login', "\App\Http\Controllers\LoginController@index");
-    Route::get('/', '\App\Http\Controllers\PostController@index');
+   // Route::get('/', '\App\Http\Controllers\PostController@index');
 // 文章
     Route::get('/posts', '\App\Http\Controllers\PostController@index');
     Route::get('/topic/{topic}', '\App\Http\Controllers\TopicController@show');\
