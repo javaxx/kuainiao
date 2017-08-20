@@ -25,14 +25,17 @@ class DeployController extends Controller
         $payload = file_get_contents('php://input');
 
         if ($this->isFromGithub($payload, $signature)) {
-            foreach ($commands as $command) {
+   /*         foreach ($commands as $command) {
                  $a = shell_exec($command);
 
 
                 Storage::put(
                     $command,
                    $a
-                );            }
+                );            }*/
+
+            shell_exec('cd /var/www/kuainiao');
+            shell_exec('git pull');
             http_response_code(200);
         } else {
             abort(403);
