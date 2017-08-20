@@ -17,7 +17,7 @@ class DeployController extends Controller
 
     public function deploy(Request $request)
     {
-        $commands = ['cd /var/www/kuainiao', 'git pull'];
+        //$commands = ['cd /var/www/kuainiao', 'git pull'];
 
 
         $signature = $request->header('X-Hub-Signature');
