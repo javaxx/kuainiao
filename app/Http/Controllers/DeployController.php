@@ -35,7 +35,7 @@ class DeployController extends Controller
                    $a
                 );            }*/
 
-            $a =shell_exec('cd /var/www/kuainiao');
+            $a =shell_exec('cd  /var/www/kuainiao');
             Storage::put(
                 'a.txt',
                 $a

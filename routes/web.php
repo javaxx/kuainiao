@@ -12,7 +12,7 @@
 /*
  *推广
 */
-Route::get('/', function () {
+Route::get('/a', function () {
     return view('welcome');
 });
 
