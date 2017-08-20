@@ -48,7 +48,7 @@ class WechatMessageSever
                 if (is_null($userOpenid)){
                     $email =  mb_substr($message , 3 , strlen($message)-3);
                     $user=User::where('email',$email)->first();
-                    if (is_null($user)) {
+                    if ($user) {
                         return '你输入的#'.$email.'#不存在,请到网站上注册,如果邮箱格式错误,请注意格式[绑定:你的邮箱]###例如(绑定:kuainiao@xianfei.com)';
                     }
                     if (is_null($user->openid)) {
