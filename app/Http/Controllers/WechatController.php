@@ -23,8 +23,8 @@ class WechatController extends  Controller
 
         $wechat = app('wechat');
         $wmServer = new WechatMessageSever();
-
-        $wechat->server->setMessageHandler(function($message) use ($wmServer){
+        $userService = $wechat->user;
+        $wechat->server->setMessageHandler(function($message) use ($userService,$wmServer){
 
             switch ($message->MsgType) {
                 case 'event':
@@ -38,8 +38,11 @@ class WechatController extends  Controller
                     }
                     break;
                 case 'text':
-                    return $wmServer->index($message->Content,$message->FromUserName);
-                //    return $message->Content.$message->FromUserName;
+                    $openId = $message->FromUserName;
+                    $user = $userService->get($openId);
+
+
+                    return $wmServer->index($message->Content,$openId,$user);
                     break;
                 case 'image':
                     return '收到图片消息';

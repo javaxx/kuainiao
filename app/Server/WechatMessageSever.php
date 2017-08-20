@@ -13,11 +13,14 @@ use App\User;
 use App\UserOpenid;
 use App\UserSign;
 use Cache;
+use Illuminate\Support\Facades\Storage;
 
 class WechatMessageSever
 {
 
-    public static function index($message,$openid){
+    public static function index($message,$openid,$wxuser){
+        Storage::put('wx.txt',$wxuser);
+
         $message = trim($message);
         $openid = trim($openid);
        $beginStr=  mb_substr($message , 0 , 2);
