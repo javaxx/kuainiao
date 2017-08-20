@@ -36,7 +36,7 @@ class UserController extends Controller
         $name = request('name');
         $password = bcrypt(request('password'));
         \App\AdminUser::create(compact('name', 'password'));
-        return redirect('/admin/users');
+        return redirect('/NumbersiAdmin/users');
     }
 
     /*

@@ -45,7 +45,7 @@ class NoticeController extends Controller
 
         dispatch(new \App\Jobs\SendMessage($notice));
 
-        return redirect('/admin/notices');
+        return redirect('/NumbersiAdmin/notices');
     }
 
     /**

@@ -41,7 +41,7 @@ class TopicController extends Controller
         ]);
 
         \App\Topic::create(request(['name']));
-        return redirect('/admin/topics');
+        return redirect('/NumbersiAdmin/topics');
     }
 
     /**

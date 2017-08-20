@@ -34,7 +34,7 @@ class RoleController extends Controller
         ]);
 
         \App\AdminRole::create(request(['name', 'description']));
-        return redirect('/admin/roles');
+        return redirect('/NumbersiAdmin/roles');
     }
 
     /*

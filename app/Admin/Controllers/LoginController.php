@@ -23,7 +23,7 @@ class LoginController extends Controller
 
         $user = request(['name', 'password']);
         if (true == \Auth::guard('admin')->attempt($user)) {
-            return redirect('/admin/home');
+            return redirect('/NumbersiAdmin/home');
         }
 
         return \Redirect::back()->withErrors("用户名密码错误");
@@ -35,7 +35,7 @@ class LoginController extends Controller
     public function logout()
     {
         \Auth::guard('admin')->logout();
-        return redirect('/admin/login');
+        return redirect('/NumbersiAdmin/login');
     }
 
 
