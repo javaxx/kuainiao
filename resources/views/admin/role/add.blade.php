@@ -15,7 +15,7 @@
                         </div>
                         <!-- /.box-header -->
                         <!-- form start -->
-                        <form role="form" action="/admin/roles/store" method="POST">
+                        <form role="form" action="/NumbersiAdmin/roles/store" method="POST">
                             {{csrf_field()}}
                             <div class="box-body">
                                 <div class="form-group">

@@ -11,7 +11,7 @@
                     <div class="box-header with-border">
                         <h3 class="box-title">专题列表</h3>
                     </div>
-                    <a type="button" class="btn " href="/admin/topics/create" >增加专题</a>
+                    <a type="button" class="btn " href="/NumbersiAdmin/topics/create" >增加专题</a>
                     <!-- /.box-header -->
                     <div class="box-body">
                         <table class="table table-bordered">
@@ -25,7 +25,7 @@
                                     <td>{{$topic->id}}</td>
                                     <td>{{$topic->name}}</td>
                                     <td>
-                                        <a type="button" class="btn resource-delete" delete-url="/admin/topics/{{$topic->id}}" href="#" >删除</a>
+                                        <a type="button" class="btn resource-delete" delete-url="/NumbersiAdmin/topics/{{$topic->id}}" href="#" >删除</a>
                                     </td>
                                 </tr>
                             @endforeach

@@ -13,7 +13,7 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <form action="/admin/users/{{$user->id}}/role" method="POST">
+                        <form action="/NumbersiAdmin/users/{{$user->id}}/role" method="POST">
                             {{csrf_field()}}
                             <div class="form-group">
                                 @foreach($roles as $role)
