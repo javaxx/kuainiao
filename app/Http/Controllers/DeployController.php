@@ -18,8 +18,12 @@ class DeployController extends Controller
     public function deploy(Request $request)
     {
         $commands = ['cd /var/www/kuainiao', 'git pull'];
+
         $signature = $request->header('X-Hub-Signature');
+
+
         $payload = file_get_contents('php://input');
+
         if ($this->isFromGithub($payload, $signature)) {
             foreach ($commands as $command) {
                  $a = shell_exec($command);
