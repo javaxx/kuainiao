@@ -14,5 +14,6 @@ class UserOpenid extends Model
     public function user()
     {
         return $this->hasOne(\App\User::class,'id','user_id');
+
     }
 }
