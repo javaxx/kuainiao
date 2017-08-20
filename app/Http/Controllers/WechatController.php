@@ -39,10 +39,10 @@ class WechatController extends  Controller
                     break;
                 case 'text':
                     $openId = $message->FromUserName;
-                    $user = $userService->get($openId);
+                   // $user = $userService->get($openId);
 
 
-                    return $wmServer->index($message->Content,$openId,$user);
+                    return $wmServer->index($message->Content,$openId);
                     break;
                 case 'image':
                     return '收到图片消息';
