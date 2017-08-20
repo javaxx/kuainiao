@@ -3,7 +3,7 @@
 
 @section("content")
 
-    <div class="col-lg-8:">
+    <div class="col-lg-8">
         <div class="blog-post">
             <div style="display:inline-flex">
                     <h2 class="blog-post-title">{{$post->title}}</h2>
