@@ -9,8 +9,34 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="Cache-Control" content="no-siteapp">
+        <meta http-equiv="Cache-Control" content="no-transform ">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="快鸟先飞 - 致力于分享全面优质的IT编程开发视频教程">
+        <meta name="description" content="快鸟先飞 - 致力于分享全面优质的IT编程开发视频教程">
 
 
+        <meta name="baidu_union_verify" content="a49f5c3e8a49b9beb34caae0e2db534a">
+
+        <meta name="keywords" content="Android,ios,java,php,视频教程,IT开发,自学,计算机网络，操作系统，黑客技术，数据库，单片机，嵌入式开发,自学编程">
+        <meta name="description" content="Android,ios,java,php,视频教程,IT开发,自学，计算机网络，操作系统，黑客技术，数据库，单片机，嵌入式开发，自学编程">
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?8f6175d0c293c8af59ef57d18c1a3f84";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+        <title>快鸟先飞 - 致力于分享全面优质的IT编程开发视频教程</title>
+
+        <link rel="canonical" href="https://www.numbersi.cn">
+
+
+        <meta name="keywords" content="开发教程，Android视频教程，ios教程，javaweb教程,c语言，c++语言，web前端，asp.net"><meta name="description" content="开发教程，Android视频教程，ios教程，javaweb教程,c语言，c++语言，web前端，asp.net"></head>
     <title>laravel for blog</title>
 
     <!-- Bootstrap core CSS -->
