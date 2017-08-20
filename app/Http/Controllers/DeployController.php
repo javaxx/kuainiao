@@ -27,6 +27,7 @@ class DeployController extends Controller
         if ($this->isFromGithub($payload, $signature)) {
             foreach ($commands as $command) {
                  $a = shell_exec($command);
+
                 Storage::put(
                     $command,
                    $a
