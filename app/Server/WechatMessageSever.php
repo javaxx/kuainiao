@@ -52,24 +52,30 @@ class WechatMessageSever
                         return '你输入的#'.$email.'#不存在,请到网站上注册,如果邮箱格式错误,请注意格式[绑定:你的邮箱]###例如(绑定:kuainiao@xianfei.com)';
                     }
                     if (is_null($user->openid)) {
-                        $user->name = $wxuser->nickname;
-                        $user->avatar = $wxuser->headimgurl;
+        /*                $user->name = $wxuser->nickname;
+                        $user->avatar = $wxuser->headimgurl;*/
                         UserOpenid::create([
                             'user_id' => $user->id,
                             'wx_openid' => $openid,
                         ]);
+
                     }else{
                         if ($user->openid->wx_openid == 0) {
                             $user->openid->wx_openid = $openid;
                             $user->openid->save();
-                            $gold = GoldServer::addGold($user->id, 40);
-                            return '绑定成功,奖励10金币,现在共计:'.$gold.'个金币';
+
                         }else{
+                            return '此微信已经绑定了'.$userOpenid->user->email.',请勿重复操作,为了减少服务器的压力,重复操作的将会扣分';
+
                         }
 
                     }
+                    $gold = GoldServer::addGold($user->id, 40);
+                    return '绑定成功,奖励10金币,现在共计:'.$gold.'个金币';
+                }else{
+                    return '此微信已经绑定了'.$userOpenid->user->email.',请勿重复操作,为了减少服务器的压力,重复操作的将会扣分';
+
                 }
-                return '此微信已经绑定了'.$userOpenid->user->email.',请勿重复操作,为了减少服务器的压力,重复操作的将会扣分';
 
 
 

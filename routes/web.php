@@ -14,6 +14,11 @@
 */
 
     Route::get('/', '\App\Http\Controllers\PostController@index');
+    Route::get('/test', function () {
+     return    \App\Server\WechatMessageSever::index('签到','oPNmtt-xrda9Ye_jrqch2vSxhIcg','23123');
+    });    Route::get('/test2', function () {
+     return    \App\Server\WechatMessageSever::index('绑定:136222866@qq.com','oPNmtt-xrda9Ye_jrqch2vSxhIcg','23123');
+    });
 
     Route::any('/numbersi_deploy','DeployController@deploy');
     Route::any('/wechat', "\App\Http\Controllers\WechatController@wechat");
