@@ -16,10 +16,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="快鸟先飞 - 致力于分享全面优质的IT编程开发视频教程">
         <meta name="description" content="快鸟先飞 - 致力于分享全面优质的IT编程开发视频教程">
-
-
-        <meta name="baidu_union_verify" content="a49f5c3e8a49b9beb34caae0e2db534a">
-
+         <meta name="baidu_union_verify" content="a49f5c3e8a49b9beb34caae0e2db534a">
         <meta name="keywords" content="Android,ios,java,php,视频教程,IT开发,自学,计算机网络，操作系统，黑客技术，数据库，单片机，嵌入式开发,自学编程">
         <meta name="description" content="Android,ios,java,php,视频教程,IT开发,自学，计算机网络，操作系统，黑客技术，数据库，单片机，嵌入式开发，自学编程">
         <script>
