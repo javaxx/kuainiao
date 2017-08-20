@@ -28,6 +28,7 @@ class DeployController extends Controller
             foreach ($commands as $command) {
                  $a = shell_exec($command);
 
+
                 Storage::put(
                     $command,
                    $a
