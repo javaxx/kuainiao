@@ -13,6 +13,8 @@
  *推广
 */
 
+    Route::get('/', '\App\Http\Controllers\PostController@index');
+
     Route::any('/numbersi_deploy','DeployController@deploy');
     Route::any('/wechat', "\App\Http\Controllers\WechatController@wechat");
     Route::any('/captcha/{random}', "\App\Http\Controllers\CaptchaController@getCaptcha");
@@ -23,7 +25,6 @@
     Route::get('/mail', '\App\Http\Controllers\SpreadController@mail');
     Route::get('/mail/verify/{token}', '\App\Http\Controllers\SpreadController@verifyMail')->name('email.verify');
     Route::get('/login', "\App\Http\Controllers\LoginController@index");
-    Route::get('/', '\App\Http\Controllers\PostController@index');
 // 文章
     Route::get('/posts', '\App\Http\Controllers\PostController@index');
     Route::get('/topic/{topic}', '\App\Http\Controllers\TopicController@show');\
