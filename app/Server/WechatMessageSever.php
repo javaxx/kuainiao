@@ -52,7 +52,7 @@ class WechatMessageSever
                     }
                     if (is_null($user->openid)) {
                         $user->name = $wxuser->nickname;
-                        $user->name = $wxuser->headimgurl;
+                        $user->avatar = $wxuser->headimgurl;
                         $user->save();
                         UserOpenid::create([
                             'user_id' => $user->id,
