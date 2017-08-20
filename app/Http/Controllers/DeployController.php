@@ -19,6 +19,7 @@ class DeployController extends Controller
     {
         $commands = ['cd /var/www/kuainiao', 'git pull'];
 
+
         $signature = $request->header('X-Hub-Signature');
 
 
