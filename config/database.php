@@ -56,7 +56,7 @@ return [
                 'dump_binary_path' => '/usr/bin/', // only the path, so without `mysqldump` or `pg_dump`
                 'use_single_transaction',
                 'timeout' => 60 , // 5 minute timeout
-                'exclude_tables' => [],
+                'exclude_tables' => [''],
                 'add_extra_option' => '',
             ]
         ],
