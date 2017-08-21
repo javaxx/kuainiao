@@ -193,6 +193,10 @@ return [
 
         Overtrue\LaravelFilesystem\Qiniu\QiniuStorageServiceProvider::class,
 
+
+
+        Spatie\Backup\BackupServiceProvider::class,
+
     ],
 
     /*

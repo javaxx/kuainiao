@@ -2,10 +2,10 @@
 <div>
 
 
-    <footer  class="footer col-xs-12" style="
+    <footer  class="footer col-xs-12 col-lg-12" style="
     background-color: #222;
     border-color: #080808;">
-        <p>
+        <p >
             <a href="#">回到顶部</a>
         </p>
         <p>快鸟先飞 @ K鸟</p>

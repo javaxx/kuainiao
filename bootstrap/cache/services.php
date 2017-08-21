@@ -36,6 +36,7 @@
     32 => 'Overtrue\\LaravelWechat\\ServiceProvider',
     33 => 'Overtrue\\LaravelUEditor\\UEditorServiceProvider',
     34 => 'Overtrue\\LaravelFilesystem\\Qiniu\\QiniuStorageServiceProvider',
+    35 => 'Spatie\\Backup\\BackupServiceProvider',
   ),
   'eager' => 
   array (
@@ -61,6 +62,7 @@
     19 => 'Overtrue\\LaravelWechat\\ServiceProvider',
     20 => 'Overtrue\\LaravelUEditor\\UEditorServiceProvider',
     21 => 'Overtrue\\LaravelFilesystem\\Qiniu\\QiniuStorageServiceProvider',
+    22 => 'Spatie\\Backup\\BackupServiceProvider',
   ),
   'deferred' => 
   array (
