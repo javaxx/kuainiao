@@ -57,7 +57,7 @@ return [
                 'use_single_transaction',
                 'timeout' => 60 , // 5 minute timeout
                 'exclude_tables' => [''],
-                'add_extra_option' => '',
+                'add_extra_option' => ' ',
             ]
         ],
 
