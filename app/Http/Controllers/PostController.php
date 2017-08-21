@@ -16,7 +16,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $user = \Auth::user();
+
         $posts = Post::aviable()->orderBy('created_at', 'asc')->withCount(["zans", "comments",'buys'])->with(['user'])->paginate(6);
 
         return view('post/index', compact('posts'));
