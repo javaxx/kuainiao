@@ -58,7 +58,7 @@ return [
                 'timeout' => 60 , // 5 minute timeout
                 'exclude_tables' => [''],
 
-                'add_extra_option' => '--extends-insert=FALSE --complete-insert=TRUE',
+                'add_extra_option' => ' ',
             ]
         ],
 
