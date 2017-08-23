@@ -1,11 +1,9 @@
 @extends("layout.main")
 
 @section("content")
-    @include('flash::message')
 
     <!-- 广告轮播 -->
     @include("post.carousel")
-    @include('flash::message')
 
     <div class="container summary">
 

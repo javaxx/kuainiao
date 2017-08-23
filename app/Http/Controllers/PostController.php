@@ -7,6 +7,7 @@ use App\User;
 use Illuminate\Http\Request;
 use App\Post;
 use Auth;
+use MercurySeries\Flashy\Flashy;
 use Visitor;
 
 class PostController extends Controller

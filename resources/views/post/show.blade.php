@@ -29,7 +29,7 @@
     background-color: #dff0d8;
     border-color: #d6e9c6;padding: 25px">{{$post->links}}</p>
                 @else
-                    <p>  <a href="/posts/{{$post->id}}/get" type="button" class="btn  btn-lg btn-danger @if(!\Auth::check()) disabled  @endif">获取</a> 所需金币  : {{$post->gold}}</p>
+                    <p>  <a href="/posts/{{$post->id}}/get" type="button" class="btn  btn-lg btn-danger">获取</a> 所需金币  : {{$post->gold}}</p>
                 @endif
 
                 @include("layout.error")

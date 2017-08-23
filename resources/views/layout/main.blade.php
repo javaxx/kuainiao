@@ -207,6 +207,8 @@
 <div class="col-lg-12">
 
     <div class="col-lg-8 ">
+        @include('flash::message')
+
         <div class="col-center-block">
             @yield("content")
         </div>
