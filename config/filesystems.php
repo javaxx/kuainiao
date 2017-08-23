@@ -80,6 +80,7 @@ return [
             'access_key' => env('ck9JDFIY4Ezi5rHOZWCvvZXR0z5SqUnqOiiTWBCm', 'ck9JDFIY4Ezi5rHOZWCvvZXR0z5SqUnqOiiTWBCm'),
             'secret_key' => env('YV5oClB3mu0nSxIk12XsX6Qa7Ry47SfnzfGmIQKF', 'YV5oClB3mu0nSxIk12XsX6Qa7Ry47SfnzfGmIQKF'),
             'bucket'     => env('QINIU_BUCKET', 'kuainiao'),
+
             'domain'     => env('QINIU_DOMAIN', 'kuainiaobucket.numbersi.cn'), // or host: https://xxxx.clouddn.com
         ],
     ],

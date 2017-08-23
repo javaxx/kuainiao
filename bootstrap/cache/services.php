@@ -37,6 +37,7 @@
     33 => 'Overtrue\\LaravelUEditor\\UEditorServiceProvider',
     34 => 'Overtrue\\LaravelFilesystem\\Qiniu\\QiniuStorageServiceProvider',
     35 => 'Spatie\\Backup\\BackupServiceProvider',
+    36 => 'MercurySeries\\Flashy\\FlashyServiceProvider',
   ),
   'eager' => 
   array (
@@ -63,6 +64,7 @@
     20 => 'Overtrue\\LaravelUEditor\\UEditorServiceProvider',
     21 => 'Overtrue\\LaravelFilesystem\\Qiniu\\QiniuStorageServiceProvider',
     22 => 'Spatie\\Backup\\BackupServiceProvider',
+    23 => 'MercurySeries\\Flashy\\FlashyServiceProvider',
   ),
   'deferred' => 
   array (
