@@ -14,6 +14,7 @@
 */
 
     Route::get('/', '\App\Http\Controllers\PostController@index');
+    Route::get('/baidu', '\App\Http\Controllers\TestController@index');
     Route::get('/test', function () {
      return    \App\Server\WechatMessageSever::index('签到','oPNmtt-xrda9Ye_jrqch2vSxhIcg','23123');
     });    Route::get('/test2', function () {

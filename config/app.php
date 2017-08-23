@@ -197,6 +197,10 @@ return [
 
         Spatie\Backup\BackupServiceProvider::class,
 
+
+        MercurySeries\Flashy\FlashyServiceProvider::class
+
+
     ],
 
     /*
@@ -249,7 +253,7 @@ return [
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
 
         'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
-
+        'Flashy' => MercurySeries\Flashy\Flashy::class,
     ],
 
 ];
