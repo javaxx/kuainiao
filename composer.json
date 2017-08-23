@@ -16,6 +16,7 @@
         "laravel/scout": "^3.0",
         "laravel/tinker": "~1.0",
         "mercuryseries/flashy": "^1.0",
+
         "overtrue/laravel-filesystem-qiniu": "0.0.3",
         "overtrue/laravel-ueditor": "~1.0",
         "overtrue/laravel-wechat": "~3.0",
