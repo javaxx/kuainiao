@@ -85,9 +85,7 @@ class SpreadController extends Controller
         $user->is_active = 1;
         $user->confirmation_token = str_random(40);
         $user->save();
-        if ($user->promoter_id) {
-            GoldServer::addGold($user->promoter_id,10);
-        }
+
 
         Auth::login($user);
         flash('邮箱验证成功！请登陆', 'success');

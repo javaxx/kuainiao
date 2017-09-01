@@ -24,13 +24,9 @@ class RegisterController extends Controller
             ]);
 
         $password = bcrypt(request('password'));
-
         $name = request('name');
-
         $email = request('email');
-
         User::create(compact('name', 'email', 'password'));
-
         return redirect('/login');
     }
 }
