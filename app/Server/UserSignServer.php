@@ -41,12 +41,16 @@ class UserSignServer
                 }else{
                     $userSign->sign_num = $sign_num;
                     $userSign->updated_at = $nowTime;
-                    $a =$userSign->save();
+                    $userSign->save();
                 }
 
             }else{
 
                 $yesterdaySign->sign_num +=1;
+
+                if ($yesterdaySign->sign_num >30) {
+                    $yesterdaySign->sign_num = 1;
+                }
                 $sign_num = $yesterdaySign->sign_num;
                 $yesterdaySign->updated_at=$nowTime;
                 $yesterdaySign->save();
