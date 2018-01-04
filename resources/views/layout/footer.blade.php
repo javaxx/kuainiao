@@ -4,7 +4,7 @@
 
     <footer  class="footer col-xs-12 col-lg-12" style="
     background-color: #222;
-    border-color: #080808;">
+    border-color: #080808; text-align: center">
         <p >
             <a href="#">回到顶部</a>
         </p>
