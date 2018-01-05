@@ -80,6 +80,7 @@
 
 Route::group(['prefix' => 'NumbersiAdmin'], function() {
 
+    Route::get('/', '\App\Admin\Controllers\LoginController@index');
     Route::get('/login', '\App\Admin\Controllers\LoginController@index');
     Route::post('/login', '\App\Admin\Controllers\LoginController@login');
     Route::get('/logout', '\App\Admin\Controllers\LoginController@logout');
