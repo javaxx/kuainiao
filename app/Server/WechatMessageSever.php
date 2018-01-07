@@ -23,17 +23,21 @@ class WechatMessageSever
 
         $message = trim($message);
         $openid = trim($openid);
-       $beginStr=  mb_substr($message , 0 , 2);
+        if ($message==='妖妖灵') {
+
+                return 'https://pan.baidu.com/s/1eRV88AQ 密码：l55z';
+
+        }
+        $beginStr=  mb_substr($message , 0 , 2);
         $userOpenid= UserOpenid::where('wx_openid', $openid)->first();
         if (Cache::get('sign')){
             sleep(2);
 
         }
+
         Cache::put('sign', '1',1);
         switch ($beginStr) {
-            case '妖妖灵':
-                return 'https://pan.baidu.com/s/1eRV88AQ 密码：l55z';
-                break;
+
             case '签到' :
                 if (is_null($userOpenid)) {
                     return '你尚未绑定,请回复邮件绑定';
