@@ -31,15 +31,15 @@ class WechatMessageSever
         }
         Cache::put('sign', '1',1);
         switch ($beginStr) {
+            case '妖妖灵':
+                return 'https://pan.baidu.com/s/1eRV88AQ 密码：l55z';
+                break;
             case '签到' :
-
-
                 if (is_null($userOpenid)) {
                     return '你尚未绑定,请回复邮件绑定';
                 }else{
                    return UserSignServer::sign($userOpenid->user->id);
                 }
-
                 break;
             case '绑定':
                 if (is_null($userOpenid)){
@@ -53,17 +53,13 @@ class WechatMessageSever
                             'user_id' => $user->id,
                             'wx_openid' => $openid,
                         ]);
-
                     }else{
                         if ($user->openid->wx_openid == 0) {
                             $user->openid->wx_openid = $openid;
                             $user->openid->save();
-
                         }else{
                             return '此微信已经绑定了'.$userOpenid->user->email.',请勿重复操作,为了减少服务器的压力,重复操作的将会扣分';
-
                         }
-
                     }
                     $gold = GoldServer::addGold($user->id, 40);
                     if ($user->promoter_id) {
